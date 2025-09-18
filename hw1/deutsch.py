@@ -28,14 +28,12 @@ def deutsch(oracle, label):
 def run_tests():
     print("\n--- Running Deutsch Algorithm Tests ---\n")
 
-    # Test constant case
     counts_const = deutsch(oracle_constant, "Constant f(x)=1")
     if list(counts_const.keys()) == ['0']:
         print("Constant test passed: always measured 0\n")
     else:
         print("Constant test failed\n")
 
-    # Test balanced case
     counts_bal = deutsch(oracle_balanced, "Balanced f(0)=1, f(1)=0")
     if list(counts_bal.keys()) == ['1']:
         print("Balanced test passed: always measured 1\n")
